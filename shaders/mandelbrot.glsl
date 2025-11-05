@@ -57,7 +57,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 #endif
         
         float zoo = 0.62 + 0.38 * cos(0.07 * time);
-        float angle = 0.15 * (1.0 - zoo) * time;
+        float angle = 0.05 * time;
         float coa = cos(angle);
         float sia = sin(angle);
         zoo = pow(zoo, 8.0);
@@ -68,8 +68,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
         float l = mandelbrot(c);
         
         // Base colors
-        vec3 bgPurple = vec3(0.2, 0.0, 0.4);   // deep purple background
-        vec3 fgPink  = vec3(1.0, 0.4, 0.8);    // bright pink for edges
+        //vec3 bgPurple = vec3(0.2, 0.0, 0.4);
+        //vec3 fgPink  = vec3(1.0, 0.4, 0.8);
+        vec3 bgPurple = vec3(0.1, 0.0, 0.2);
+        vec3 fgPink  = vec3(0.8, 0.2, 0.6);
         
         // Smooth interpolation for escaped points
         vec3 pinkInterp = bgPurple + (fgPink - bgPurple) * (0.5 + 0.5 * cos(l * 0.15));
