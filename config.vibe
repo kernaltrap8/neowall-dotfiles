@@ -1,0 +1,5 @@
+default {
+  shader mandelbrot.glsl
+  #shader ~/.config/neowall/shaders
+  shader_speed 1.0
+}
