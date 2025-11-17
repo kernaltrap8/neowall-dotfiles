@@ -6,9 +6,8 @@
 // You can share a link to it or an unmodified screenshot of it provided you attribute "by Inigo Quilez, @iquilezles and iquilezles.org".
 // If you are a teacher, lecturer, educator or similar and these conditions are too restrictive for your needs, please contact me and we'll work it out.
 
-// Optimized version - reduced iterations for better performance
 #define AA 2
-#define MAX_ITER 256  // Reduced from 512 for better performance
+#define MAX_ITER 1024  // Reduced from 512 for better performance
 
 float mandelbrot(in vec2 c)
 {
